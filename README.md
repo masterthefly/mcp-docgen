@@ -148,13 +148,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 Anthropic for creating the Model Context Protocol  
 MCP Community for building an amazing ecosystem  
 All contributors who help make this project better  
-
-🔗 Links  
-
-Model Context Protocol  
-MCP Specification  
-MCP Server Examples  
-Documentation  
-
-
-Made with ❤️ by the MCP community  
