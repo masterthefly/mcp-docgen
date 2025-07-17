@@ -1,7 +1,7 @@
-Generate beautiful, comprehensive documentation for your Model Context Protocol (MCP) servers with zero configuration.
-🚀 Quick Start
-bash# Install globally
-npm install -g mcp-docgen
+Generate beautiful, comprehensive documentation for your Model Context Protocol (MCP) servers with zero configuration.  
+Quick Start  
+bash# Install globally  
+npm install -g mcp-docgen  
 
 # Generate documentation for your MCP server
 mcp-docgen generate ./my-mcp-server
