@@ -1,5 +1,9 @@
 Generate beautiful, comprehensive documentation for your Model Context Protocol (MCP) servers with zero configuration.  
+<<<<<<< HEAD
 **Quick Start**  
+=======
+Quick Start  
+>>>>>>> 015c9ba698244b0084f2212866bf7b193e05d322
 bash# Install globally  
 npm install -g mcp-docgen  
 
@@ -158,4 +162,8 @@ MCP Server Examples
 Documentation  
 
 
+<<<<<<< HEAD
 Made with ❤️ by the MCP community  
+=======
+Made with ❤️ by the MCP community
+>>>>>>> 015c9ba698244b0084f2212866bf7b193e05d322
