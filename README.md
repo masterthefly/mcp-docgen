@@ -1,6 +1,6 @@
 Generate beautiful, comprehensive documentation for your Model Context Protocol (MCP) servers with zero configuration.  
 **Quick Start**  
-bash# Install globally  
+Install globally  
 npm install -g mcp-docgen  
 
 # Generate documentation for your MCP server
@@ -29,16 +29,15 @@ Resources - Data sources that provide context
 Prompts - Templates for common interactions  
 
 **Installation**  
-Global Installation (Recommended)  
-bashnpm install -g mcp-docgen  
+Global Installation (Recommended)    
+npm install -g mcp-docgen   
 Local Installation  
-bashnpm install --save-dev mcp-docgen  
+npm install --save-dev mcp-docgen  
 Using npx  
-bashnpx mcp-docgen generate ./my-server  
+npx mcp-docgen generate ./my-server  
 
 **Usage**  
 Generate Documentation  
-bash# Basic usage  
 mcp-docgen generate ./path/to/your/mcp-server
 
 # Specify output directory
@@ -50,7 +49,7 @@ mcp-docgen generate ./server --template modern
 # Generate markdown instead of HTML
 mcp-docgen generate ./server --format markdown  
 Serve Documentation Locally  
-bash# Serve on default port (3000)  
+Serve on default port (3000)  
 mcp-docgen serve ./docs  
 
 # Specify custom port
@@ -59,13 +58,13 @@ mcp-docgen serve ./docs --port 8080
 # Open browser automatically
 mcp-docgen serve ./docs --open  
 Deploy Documentation  
-bash# Deploy to GitHub Pages  
+Deploy to GitHub Pages  
 mcp-docgen deploy ./docs --platform github-pages  
 
 # Deploy to Netlify
 mcp-docgen deploy ./docs --platform netlify  
 Initialize New MCP Server  
-bash# Create a new MCP server with documentation setup  
+Create a new MCP server with documentation setup  
 mcp-docgen init my-new-server --template typescript  
 
 **Configuration**  
@@ -96,7 +95,7 @@ api-focused - Technical documentation for developers
 
 Custom Templates  
 Create your own templates using our template system:  
-bashmcp-docgen template create my-custom-template  
+mcp-docgen template create my-custom-template  
 
 **Server Support**  
 MCP DocGen automatically detects and supports:  
@@ -110,7 +109,7 @@ Custom servers following MCP protocol
 **Contributing**  
 We welcome contributions! Please see our Contributing Guide for details.  
 Development Setup  
-bash# Clone the repository  
+Clone the repository  
 git clone https://github.com/yourusername/mcp-docgen.git  
 cd mcp-docgen  
 
