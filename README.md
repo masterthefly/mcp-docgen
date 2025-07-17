@@ -1,38 +1,153 @@
-**Introduction**
+Generate beautiful, comprehensive documentation for your Model Context Protocol (MCP) servers with zero configuration.
+🚀 Quick Start
+bash# Install globally
+npm install -g mcp-docgen
 
-Welcome to MCP DocGen, an open-source tool designed to automatically generate documentation for Model Context Protocol (MCP) servers. 
-This README provides all the information you need to install, use, and contribute to the project.
+# Generate documentation for your MCP server
+mcp-docgen generate ./my-mcp-server
 
-**Installation**
+# Serve documentation locally
+mcp-docgen serve ./docs
 
-To get started, ensure you have Python 3.6 or higher installed. Then, install MCP DocGen using pip with the following command:
+# Your docs are now available at http://localhost:3000
+✨ Features
 
-pip install mcp-docgen
+🔍 Automatic Discovery - Analyzes MCP servers and extracts all capabilities
+📝 Beautiful Documentation - Generates clean, responsive documentation
+🎨 Customizable Themes - Multiple built-in themes and custom template support
+🚀 Development Server - Live reload during documentation development
+📱 Responsive Design - Works perfectly on all devices
+🔧 Multiple Formats - HTML, Markdown, and JSON output
+🌐 Easy Deployment - One-command deployment to GitHub Pages, Netlify, and more
 
-**Usage**
+📖 What is MCP?
+The Model Context Protocol (MCP) is an open standard that enables AI applications to securely connect with external data sources and tools. MCP servers expose:
 
-MCP DocGen is a command-line tool that works with both local and remote MCP servers. 
+Tools - Actions that AI models can execute
+Resources - Data sources that provide context
+Prompts - Templates for common interactions
 
-Here are examples of how to use it:
+🛠 Installation
+Global Installation (Recommended)
+bashnpm install -g mcp-docgen
+Local Installation
+bashnpm install --save-dev mcp-docgen
+Using npx
+bashnpx mcp-docgen generate ./my-server
+📚 Usage
+Generate Documentation
+bash# Basic usage
+mcp-docgen generate ./path/to/your/mcp-server
 
-**For Local Servers:**
+# Specify output directory
+mcp-docgen generate ./server --output ./documentation
 
-Run **mcp-docgen --local-server-path /path/to/your/server.py --output docs/mcp_tools.md** to generate documentation from a local server script.
+# Use a different theme
+mcp-docgen generate ./server --template modern
 
-**For Remote Servers:**
+# Generate markdown instead of HTML
+mcp-docgen generate ./server --format markdown
+Serve Documentation Locally
+bash# Serve on default port (3000)
+mcp-docgen serve ./docs
 
-Use **mcp-docgen --remote-server-url https://your-remote-server.com --output docs/mcp_tools.md** for a remote server, and the documentation will be saved in the specified output file.
+# Specify custom port
+mcp-docgen serve ./docs --port 8080
 
-**Contributing**
+# Open browser automatically
+mcp-docgen serve ./docs --open
+Deploy Documentation
+bash# Deploy to GitHub Pages
+mcp-docgen deploy ./docs --platform github-pages
 
-We welcome contributions! If you find a bug or have a feature request, please open an issue or submit a pull request on GitHub. For detailed guidelines, check our CONTRIBUTING.md file.
+# Deploy to Netlify
+mcp-docgen deploy ./docs --platform netlify
+Initialize New MCP Server
+bash# Create a new MCP server with documentation setup
+mcp-docgen init my-new-server --template typescript
+⚙️ Configuration
+Create a mcp-docgen.config.json file in your project root:
+json{
+  "title": "My MCP Server Documentation",
+  "description": "Comprehensive API documentation for my MCP server",
+  "template": "default",
+  "output": "./docs",
+  "logo": "./assets/logo.png",
+  "theme": {
+    "primaryColor": "#2563eb",
+    "accentColor": "#10b981"
+  },
+  "navigation": {
+    "github": "https://github.com/username/repo"
+  }
+}
+🎨 Templates
+MCP DocGen comes with several built-in templates:
 
-**Support and License**
+default - Clean, professional documentation
+modern - Contemporary design with animations
+minimal - Simple, lightweight documentation
+api-focused - Technical documentation for developers
 
-For help, open an issue on GitHub or reach out to the maintainer at @masterthefly on X. This project is licensed under the MIT License—see the LICENSE file for details.
+Custom Templates
+Create your own templates using our template system:
+bashmcp-docgen template create my-custom-template
+🧩 Server Support
+MCP DocGen automatically detects and supports:
 
-**Acknowledgements**
+Node.js/TypeScript servers using @modelcontextprotocol/sdk
+Python servers using mcp package
+C# servers using MCP SDK
+Ruby servers using MCP SDK
+Custom servers following MCP protocol
 
-This project was inspired by the MCP Inspector and relies on the MCP Python SDK. Special thanks to the Anthropic team for developing the Model Context Protocol.
+🤝 Contributing
+We welcome contributions! Please see our Contributing Guide for details.
+Development Setup
+bash# Clone the repository
+git clone https://github.com/yourusername/mcp-docgen.git
+cd mcp-docgen
 
-Note: This project is currently under active development. While it is functional, there may be bugs or missing features. Your feedback and contributions are highly appreciated!
+# Install dependencies
+npm install
+
+# Build the project
+npm run build
+
+# Run tests
+npm test
+
+# Start development
+npm run dev
+🔧 CLI Reference
+Commands
+
+generate <server-path> - Generate documentation
+serve <docs-dir> - Serve documentation locally
+deploy <docs-dir> - Deploy documentation
+init <project-name> - Initialize new MCP server
+template <action> - Manage templates
+
+Global Options
+
+--verbose - Enable verbose logging
+--quiet - Suppress non-essential output
+--config <path> - Specify config file path
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+🙏 Acknowledgments
+
+Anthropic for creating the Model Context Protocol
+MCP Community for building an amazing ecosystem
+All contributors who help make this project better
+
+🔗 Links
+
+Model Context Protocol
+MCP Specification
+MCP Server Examples
+Documentation
+
+
+Made with ❤️ by the MCP community
