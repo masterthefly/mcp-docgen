@@ -20,12 +20,10 @@ program.addCommand(serveCommand);
 program.addCommand(deployCommand);
 program.addCommand(initCommand);
 
-// Global error handler
-program.exitOverride();
-
+// Parse arguments with error handling
 try {
   program.parse();
-} catch (err) {
-  console.error(chalk.red('Error:'), err.message);
+} catch (error: any) {
+  console.error(chalk.red('Error:'), error.message);
   process.exit(1);
 }
