@@ -1,0 +1,9 @@
+{
+  "name": "sample-mcp-server",
+  "version": "1.0.0",
+  "description": "Sample MCP server for testing",
+  "main": "index.js",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "*"
+  }
+}
