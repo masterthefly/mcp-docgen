@@ -46,16 +46,16 @@ export const deployCommand = new Command('deploy')
           throw new Error(`Unsupported platform: ${options.platform}`);
       }
       
-      logger.success('🚀 Documentation deployed successfully!');
+      logger.success('Documentation deployed successfully!');
       
     } catch (error: any) {
-      logger.error('❌ Deployment failed:', error.message);
+      logger.error('Deployment failed:', error.message);
       process.exit(1);
     }
   });
 
 async function simulateDeployment(docsDir: string, options: any): Promise<void> {
-  logger.info('📋 Deployment simulation:');
+  logger.info('Deployment simulation:');
   logger.info(`  - Source: ${docsDir}`);
   logger.info(`  - Platform: ${options.platform}`);
   logger.info(`  - Branch: ${options.branch}`);
@@ -67,24 +67,19 @@ async function simulateDeployment(docsDir: string, options: any): Promise<void> 
   const files = await FileUtils.findFiles('**/*', docsDir);
   logger.info(`  - Files to deploy: ${files.length}`);
   
-  logger.success('✅ Dry run completed - ready for deployment');
+  logger.success('Dry run completed - ready for deployment');
 }
 
 async function deployToGitHubPages(docsDir: string, options: any): Promise<void> {
-  logger.info('🔄 Deploying to GitHub Pages...');
+  logger.info('Deploying to GitHub Pages...');
   
   // TODO: Implement GitHub Pages deployment
-  // This would typically involve:
-  // 1. Creating/updating gh-pages branch
-  // 2. Copying documentation files
-  // 3. Committing and pushing changes
-  // 4. Setting up custom domain if specified
   
   throw new Error('GitHub Pages deployment not yet implemented');
 }
 
 async function deployToNetlify(docsDir: string, options: any): Promise<void> {
-  logger.info('🔄 Deploying to Netlify...');
+  logger.info('Deploying to Netlify...');
   
   // TODO: Implement Netlify deployment
   // This would use Netlify API to deploy the documentation
@@ -93,7 +88,7 @@ async function deployToNetlify(docsDir: string, options: any): Promise<void> {
 }
 
 async function deployToVercel(docsDir: string, options: any): Promise<void> {
-  logger.info('🔄 Deploying to Vercel...');
+  logger.info('Deploying to Vercel...');
   
   // TODO: Implement Vercel deployment
   // This would use Vercel API to deploy the documentation

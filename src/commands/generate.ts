@@ -17,13 +17,13 @@ export const generateCommand = new Command('generate')
   .option('--verbose', 'Verbose output')
   .action(async (serverPath: string, options) => {
     try {
-      logger.info('🔍 Analyzing MCP server...');
+      logger.info('Analyzing MCP server...');
       
       const analyzer = new MCPAnalyzer();
       const serverInfo = await analyzer.analyze(path.resolve(serverPath));
       
-      logger.success('✅ Server analysis complete');
-      logger.info('📝 Generating documentation...');
+      logger.success('Server analysis complete');
+      logger.info('Generating documentation...');
       
       const generator = new DocumentationGenerator({
         template: options.template,
@@ -34,11 +34,11 @@ export const generateCommand = new Command('generate')
       
       await generator.generate(serverInfo);
       
-      logger.success('🎉 Documentation generated successfully!');
+      logger.success('Documentation generated successfully!');
       console.log(chalk.gray(`Output: ${options.output}`));
       
     } catch (error: any) {
-      logger.error('❌ Generation failed:', error.message);
+      logger.error('Generation failed:', error.message);
       if (options.verbose && error.stack) {
         console.error(chalk.gray(error.stack));
       }
