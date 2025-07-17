@@ -26,7 +26,7 @@ export const initCommand = new Command('init')
         throw new Error(`Directory ${projectName} already exists`);
       }
       
-      logger.info(`🚀 Creating new MCP server: ${projectName}`);
+      logger.info(`Creating new MCP server: ${projectName}`);
       
       let projectConfig = {
         name: projectName,
@@ -59,10 +59,10 @@ export const initCommand = new Command('init')
       // Show next steps
       showNextSteps(projectName, projectConfig);
       
-      logger.success('🎉 MCP server project created successfully!');
+      logger.success('MCP server project created successfully!');
       
     } catch (error: any) {
-      logger.error('❌ Project initialization failed:', error.message);
+      logger.error('Project initialization failed:', error.message);
       process.exit(1);
     }
   });
@@ -117,7 +117,7 @@ async function promptForProjectDetails(config: any): Promise<any> {
 }
 
 async function createProjectStructure(projectPath: string, config: any): Promise<void> {
-  logger.info('📁 Creating project structure...');
+  logger.info('Creating project structure...');
   
   await FileUtils.ensureDir(projectPath);
   
@@ -342,18 +342,17 @@ async function initializeGit(projectPath: string): Promise<void> {
   logger.info('🔧 Initializing git repository...');
   
   // TODO: Implement git initialization
-  // This would run: git init, git add ., git commit -m "Initial commit"
   
-  logger.info('✅ Git repository initialized');
+  logger.info('Git repository initialized');
 }
 
 async function installDependencies(projectPath: string, template: string): Promise<void> {
-  logger.info('📦 Installing dependencies...');
+  logger.info('Installing dependencies...');
   
   // TODO: Implement dependency installation
   // This would run: npm install in the project directory
   
-  logger.info('✅ Dependencies installed');
+  logger.info('Dependencies installed');
 }
 
 function showNextSteps(projectName: string, config: any): void {

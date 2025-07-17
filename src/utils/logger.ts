@@ -11,28 +11,28 @@ export class Logger {
   constructor(private level: LogLevel = LogLevel.INFO) {}
   
   error(message: string, ...args: any[]): void {
-    console.error(chalk.red('❌ ERROR:'), message, ...args);
+    console.error(chalk.red('ERROR:'), message, ...args);
   }
   
   warn(message: string, ...args: any[]): void {
     if (this.level >= LogLevel.WARN) {
-      console.warn(chalk.yellow('⚠️  WARN:'), message, ...args);
+      console.warn(chalk.yellow('WARN:'), message, ...args);
     }
   }
   
   info(message: string, ...args: any[]): void {
     if (this.level >= LogLevel.INFO) {
-      console.log(chalk.blue('ℹ️  INFO:'), message, ...args);
+      console.log(chalk.blue('ℹINFO:'), message, ...args);
     }
   }
   
   debug(message: string, ...args: any[]): void {
     if (this.level >= LogLevel.DEBUG) {
-      console.log(chalk.gray('🐛 DEBUG:'), message, ...args);
+      console.log(chalk.gray('DEBUG:'), message, ...args);
     }
   }
   
   success(message: string, ...args: any[]): void {
-    console.log(chalk.green('✅ SUCCESS:'), message, ...args);
+    console.log(chalk.green('SUCCESS:'), message, ...args);
   }
 }

@@ -23,7 +23,7 @@ export const serveCommand = new Command('serve')
         throw new Error(`Documentation directory not found: ${docsDir}`);
       }
       
-      logger.info(`📂 Serving documentation from: ${resolvedDocsDir}`);
+      logger.info(`Serving documentation from: ${resolvedDocsDir}`);
       
       const server = new DevServer({
         docsDir: resolvedDocsDir,
@@ -34,19 +34,19 @@ export const serveCommand = new Command('serve')
       
       await server.start();
       
-      logger.success('🚀 Documentation server started!');
-      console.log(chalk.blue(`📖 Documentation available at: http://${options.host}:${options.port}`));
+      logger.success('Documentation server started!');
+      console.log(chalk.blue(`Documentation available at: http://${options.host}:${options.port}`));
       console.log(chalk.gray('Press Ctrl+C to stop the server'));
       
       // Handle graceful shutdown
       process.on('SIGINT', () => {
-        logger.info('\n🛑 Shutting down server...');
-        logger.success('👋 Server stopped');
+        logger.info('\nShutting down server...');
+        logger.success('Server stopped');
         process.exit(0);
       });
       
     } catch (error: any) {
-      logger.error('❌ Server failed to start:', error.message);
+      logger.error('Server failed to start:', error.message);
       if (options.verbose && error.stack) {
         console.error(chalk.gray(error.stack));
       }
